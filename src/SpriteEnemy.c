@@ -21,7 +21,7 @@ void Start_SPRITE_ENEMY() {
 
 void Update_SPRITE_ENEMY() {
 	struct EnemyInfo* data = (struct EnemyInfo*) THIS->custom_data;
-	if (TranslateSprite(THIS, data->velocityX, data->velocityY)) {
+	if (TranslateSprite(THIS, data->velocityX << delta_time, data->velocityY << delta_time)) {
 		INT8 sx = rand() % 2 == 0 ? 1 : -1;
 		INT8 sy = rand() % 2 == 0 ? 1 : -1;
 
