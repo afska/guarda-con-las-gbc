@@ -8,8 +8,11 @@ UINT8 bank_STATE_GAME = 2;
 #include "ZGBMain.h"
 #include "Scroll.h"
 #include "SpriteManager.h"
+#include "Palette.h"
+#include "Print.h"
+#include "../res/src/font.h"
 
-UINT8 collision_tiles[] = {1, 0};
+static UINT16 bg_palette[] = { PALETTE_FROM_HEADER(tiles) };
 
 void Start_STATE_GAME() {
 	UINT8 i;
@@ -20,13 +23,14 @@ void Start_STATE_GAME() {
 	}
 	SHOW_SPRITES;
 
-	scroll_target = SpriteManagerAdd(SPRITE_PLAYER, 50, 50);
+	SetPalette(BG_PALETTE, 0, 8, (UINT16*) bg_palette, bank_STATE_GAME);
 
-	InitScrollTiles(0, 2, tiles, 3);
-	InitScroll(mapWidth, mapHeight, map, collision_tiles, 0, 3);
+	INIT_CONSOLE(font, 3, 2);
+
+	scroll_target = SpriteManagerAdd(SPRITE_HALU, 10, 100);
+	InitScrollTiles(0, 12, tiles, 3);
+	InitScroll(mapWidth, mapHeight, map, NULL, 0, 3);
 	SHOW_BKG;
-
-	SpriteManagerAdd(SPRITE_ENEMY, 70, 20);
 }
 
 void Update_STATE_GAME() {

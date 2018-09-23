@@ -22,10 +22,7 @@
     <ClCompile Include="src\StateGame.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SpritePlayer.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SpriteEnemy.c">
+    <ClCompile Include="src\SpriteHalu.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
