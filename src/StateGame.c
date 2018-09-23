@@ -4,15 +4,19 @@ UINT8 bank_STATE_GAME = 2;
 
 #include "..\res\src\tiles.h"
 #include "..\res\src\map.h"
+#include "..\res\src\halu.h"
 
 #include "ZGBMain.h"
 #include "Scroll.h"
 #include "SpriteManager.h"
-#include "Palette.h"
+
 #include "Print.h"
 #include "../res/src/font.h"
 
-static UINT16 bg_palette[] = { PALETTE_FROM_HEADER(tiles) };
+#include "Palette.h"
+
+static UINT16 PALETTE_TILES[] = { PALETTE_FROM_HEADER(tiles) };
+static UINT16 PALETTE_SPRITES[] = { PALETTE_FROM_HEADER(halu) };
 
 void Start_STATE_GAME() {
 	UINT8 i;
@@ -23,7 +27,8 @@ void Start_STATE_GAME() {
 	}
 	SHOW_SPRITES;
 
-	SetPalette(BG_PALETTE, 0, 8, (UINT16*) bg_palette, bank_STATE_GAME);
+	SetPalette(BG_PALETTE, 0, 8, (UINT16*) PALETTE_TILES, bank_STATE_GAME);
+	SetPalette(SPRITES_PALETTE, 0, 8, (UINT16*) PALETTE_SPRITES, bank_STATE_GAME);
 
 	INIT_CONSOLE(font, 3, 2);
 

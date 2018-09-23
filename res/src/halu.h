@@ -24,82 +24,82 @@
 
 
 /* Bank of tiles. */
-#define HaluBank 0
+#define haluBank 0
 
 /* Super Gameboy palette 0 */
-#define HaluSGBPal0c0 6076
-#define HaluSGBPal0c1 8935
-#define HaluSGBPal0c2 6596
-#define HaluSGBPal0c3 5344
+#define haluSGBPal0c0 6076
+#define haluSGBPal0c1 8935
+#define haluSGBPal0c2 6596
+#define haluSGBPal0c3 5344
 
 /* Super Gameboy palette 1 */
-#define HaluSGBPal1c0 6076
-#define HaluSGBPal1c1 8935
-#define HaluSGBPal1c2 6596
-#define HaluSGBPal1c3 5344
+#define haluSGBPal1c0 6076
+#define haluSGBPal1c1 8935
+#define haluSGBPal1c2 6596
+#define haluSGBPal1c3 5344
 
 /* Super Gameboy palette 2 */
-#define HaluSGBPal2c0 6076
-#define HaluSGBPal2c1 8935
-#define HaluSGBPal2c2 6596
-#define HaluSGBPal2c3 5344
+#define haluSGBPal2c0 6076
+#define haluSGBPal2c1 8935
+#define haluSGBPal2c2 6596
+#define haluSGBPal2c3 5344
 
 /* Super Gameboy palette 3 */
-#define HaluSGBPal3c0 6076
-#define HaluSGBPal3c1 8935
-#define HaluSGBPal3c2 6596
-#define HaluSGBPal3c3 5344
+#define haluSGBPal3c0 6076
+#define haluSGBPal3c1 8935
+#define haluSGBPal3c2 6596
+#define haluSGBPal3c3 5344
 
 /* Gameboy Color palette 0 */
-#define HaluCGBPal0c0 99
-#define HaluCGBPal0c1 32767
-#define HaluCGBPal0c2 20009
-#define HaluCGBPal0c3 24239
+#define haluCGBPal0c0 99
+#define haluCGBPal0c1 32767
+#define haluCGBPal0c2 20009
+#define haluCGBPal0c3 24239
 
 /* Gameboy Color palette 1 */
-#define HaluCGBPal1c0 6076
-#define HaluCGBPal1c1 8935
-#define HaluCGBPal1c2 6596
-#define HaluCGBPal1c3 5344
+#define haluCGBPal1c0 6076
+#define haluCGBPal1c1 8935
+#define haluCGBPal1c2 6596
+#define haluCGBPal1c3 5344
 
 /* Gameboy Color palette 2 */
-#define HaluCGBPal2c0 6076
-#define HaluCGBPal2c1 8935
-#define HaluCGBPal2c2 6596
-#define HaluCGBPal2c3 5344
+#define haluCGBPal2c0 6076
+#define haluCGBPal2c1 8935
+#define haluCGBPal2c2 6596
+#define haluCGBPal2c3 5344
 
 /* Gameboy Color palette 3 */
-#define HaluCGBPal3c0 6076
-#define HaluCGBPal3c1 8935
-#define HaluCGBPal3c2 6596
-#define HaluCGBPal3c3 5344
+#define haluCGBPal3c0 6076
+#define haluCGBPal3c1 8935
+#define haluCGBPal3c2 6596
+#define haluCGBPal3c3 5344
 
 /* Gameboy Color palette 4 */
-#define HaluCGBPal4c0 6076
-#define HaluCGBPal4c1 8935
-#define HaluCGBPal4c2 6596
-#define HaluCGBPal4c3 5344
+#define haluCGBPal4c0 6076
+#define haluCGBPal4c1 8935
+#define haluCGBPal4c2 6596
+#define haluCGBPal4c3 5344
 
 /* Gameboy Color palette 5 */
-#define HaluCGBPal5c0 6076
-#define HaluCGBPal5c1 8935
-#define HaluCGBPal5c2 6596
-#define HaluCGBPal5c3 5344
+#define haluCGBPal5c0 6076
+#define haluCGBPal5c1 8935
+#define haluCGBPal5c2 6596
+#define haluCGBPal5c3 5344
 
 /* Gameboy Color palette 6 */
-#define HaluCGBPal6c0 6076
-#define HaluCGBPal6c1 8935
-#define HaluCGBPal6c2 6596
-#define HaluCGBPal6c3 5344
+#define haluCGBPal6c0 6076
+#define haluCGBPal6c1 8935
+#define haluCGBPal6c2 6596
+#define haluCGBPal6c3 5344
 
 /* Gameboy Color palette 7 */
-#define HaluCGBPal7c0 6076
-#define HaluCGBPal7c1 8935
-#define HaluCGBPal7c2 6596
-#define HaluCGBPal7c3 5344
+#define haluCGBPal7c0 6076
+#define haluCGBPal7c1 8935
+#define haluCGBPal7c2 6596
+#define haluCGBPal7c3 5344
 /* CGBpalette entries. */
-extern unsigned char HaluCGB[];
+extern unsigned char haluCGB[];
 /* Start of tile array. */
-extern unsigned char Halu[];
+extern unsigned char halu[];
 
 /* End of HALU.H */
