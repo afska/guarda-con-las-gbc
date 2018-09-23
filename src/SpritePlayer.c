@@ -6,8 +6,8 @@ UINT8 bank_SPRITE_PLAYER = 2;
 #include "ZGBMain.h"
 #include "Keys.h"
 
-UINT8 anim_player_idle[] = {1, 0};
-UINT8 anim_player_walk[] = {2, 1, 2};
+UINT8 anim_player_idle[] = {2, 0, 1};
+UINT8 anim_player_walk[] = {2, 2, 3};
 UINT8 i;
 struct Sprite* sprite;
 
@@ -21,26 +21,26 @@ void Start_SPRITE_PLAYER() {
 void Update_SPRITE_PLAYER() {
 	if (KEY_PRESSED(J_UP)) {
 		TranslateSprite(THIS, 0, -1);
-		SetSpriteAnim(THIS, anim_player_walk, 15);
+		SetSpriteAnim(THIS, (UINT8*) anim_player_walk, 15);
 	}
 
 	if (KEY_PRESSED(J_DOWN)) {
 		TranslateSprite(THIS, 0, 1);
-		SetSpriteAnim(THIS, anim_player_walk, 15);
+		SetSpriteAnim(THIS, (UINT8*) anim_player_walk, 15);
 	}
 
 	if (KEY_PRESSED(J_LEFT)) {
 		TranslateSprite(THIS, -1, 0);
-		SetSpriteAnim(THIS, anim_player_walk, 15);
+		SetSpriteAnim(THIS, (UINT8*) anim_player_walk, 15);
 	}
 
 	if (KEY_PRESSED(J_RIGHT)) {
 		TranslateSprite(THIS, 1, 0);
-		SetSpriteAnim(THIS, anim_player_walk, 15);
+		SetSpriteAnim(THIS, (UINT8*) anim_player_walk, 15);
 	}
 
 	if (keys == 0) {
-		SetSpriteAnim(THIS, anim_player_idle, 15);
+		SetSpriteAnim(THIS, (UINT8*) anim_player_idle, 15);
 	}
 
 	SPRITEMANAGER_ITERATE(i, sprite) {

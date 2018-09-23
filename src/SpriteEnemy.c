@@ -9,25 +9,25 @@ struct EnemyInfo {
 	INT8 velocityX;
 };
 
-const UINT8 anim_enemy_idle[] = {0, 1, 2, 3};
+const UINT8 anim_enemy_idle[] = {3, 1, 2, 3};
 
 void Start_SPRITE_ENEMY() {
-	/*struct EnemyInfo* data = (struct EnemyInfo*) THIS->custom_data;
+	struct EnemyInfo* data = (struct EnemyInfo*) THIS->custom_data;
 	data->velocityX = 1;
-	data->velocityY = 1;*/
+	data->velocityY = 1;
 
-	SetSpriteAnim(THIS, anim_enemy_idle, 15);
+	SetSpriteAnim(THIS, (UINT8*) anim_enemy_idle, 15);
 }
 
 void Update_SPRITE_ENEMY() {
-	/*struct EnemyInfo* data = (struct EnemyInfo*) THIS->custom_data;
+	struct EnemyInfo* data = (struct EnemyInfo*) THIS->custom_data;
 	if (TranslateSprite(THIS, data->velocityX, data->velocityY)) {
 		INT8 sx = rand() % 2 == 0 ? 1 : -1;
 		INT8 sy = rand() % 2 == 0 ? 1 : -1;
 
 		data->velocityX = data->velocityX * sx;
 		data->velocityY = data->velocityY * sy;
-	}*/
+	}
 }
 
 void Destroy_SPRITE_ENEMY() {
