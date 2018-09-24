@@ -51,7 +51,7 @@
 #define haluSGBPal3c3 5344
 
 /* Gameboy Color palette 0 */
-#define haluCGBPal0c0 99
+#define haluCGBPal0c0 0
 #define haluCGBPal0c1 32767
 #define haluCGBPal0c2 20009
 #define haluCGBPal0c3 24239
