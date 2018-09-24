@@ -9,6 +9,8 @@ STATE_DEF_END
 _SPRITE_COLOR(SPRITE_HALU, halu, 3, FRAME_32x32, 2)\
 SPRITE_DEF_END
 
+#define $DATA ((struct Data*) THIS->custom_data)
+
 #include "ZGBMain_Init.h"
 
 #endif
