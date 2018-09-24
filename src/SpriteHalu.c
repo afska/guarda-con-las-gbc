@@ -31,9 +31,10 @@ void Start_SPRITE_HALU() {
 	THIS->coll_w = 11;
 	THIS->coll_h = 14;
 
-	$DATA->stars[0] = SpriteManagerAdd(SPRITE_STARS, 30, 10);
-	$DATA->stars[1] = SpriteManagerAdd(SPRITE_STARS, 100, 20);
-	$DATA->stars[1]->current_frame = 1;
+	$DATA->stars[0] = SpriteManagerAdd(SPRITE_WORLD, 30, 10);
+	$DATA->stars[0]->current_frame = 1;
+	$DATA->stars[1] = SpriteManagerAdd(SPRITE_WORLD, 100, 20);
+	$DATA->stars[1]->current_frame = 2;
 
 	$DATA->isPressingUp = FALSE;
 	$DATA->isJumping = FALSE;

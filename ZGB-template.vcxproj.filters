@@ -25,7 +25,7 @@
     <ClCompile Include="src\SpriteHalu.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SpriteStars.c">
+    <ClCompile Include="src\SpriteWorld.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
