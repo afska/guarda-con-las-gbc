@@ -8,15 +8,12 @@ UINT8 bank_SPRITE_HALU = 2;
 
 static UINT8 ANIM_IDLE[] = {1, 0};
 static UINT8 ANIM_BLINKING[] = {1, 1};
-static UINT8 WALK_SPEED = 3;
 static UINT8 JUMP_IMPULSE = 10;
 static UINT8 JUMP_GRAVITY = 1;
 static UINT8 BLINK_WAIT = 60;
 static UINT8 BLINK_DURATION = 10;
 
 static struct Data {
-	struct Sprite* stars[2];
-
 	UINT8 isPressingUp;
 	UINT8 isJumping;
 	UINT8 jumpStartY;
@@ -25,16 +22,13 @@ static struct Data {
 	UINT8 blinkCounter;
 };
 
+// TODO: Add declarations here
+
 void Start_SPRITE_HALU() {
 	THIS->coll_x = 2;
 	THIS->coll_y = 2;
 	THIS->coll_w = 11;
 	THIS->coll_h = 14;
-
-	$DATA->stars[0] = SpriteManagerAdd(SPRITE_WORLD, 30, 10);
-	$DATA->stars[0]->current_frame = 1;
-	$DATA->stars[1] = SpriteManagerAdd(SPRITE_WORLD, 100, 20);
-	$DATA->stars[1]->current_frame = 2;
 
 	$DATA->isPressingUp = FALSE;
 	$DATA->isJumping = FALSE;
@@ -63,9 +57,6 @@ static void blinkIfNeeded() {
 }
 
 static void handleInput() {
-	if (KEY_PRESSED(J_LEFT)) TranslateSprite(THIS, -WALK_SPEED << delta_time, 0);
-	if (KEY_PRESSED(J_RIGHT)) TranslateSprite(THIS, WALK_SPEED << delta_time, 0);
-
 	if (KEY_PRESSED(J_UP) && !$DATA->isPressingUp) $DATA->isPressingUp = TRUE;
 	if (!KEY_PRESSED(J_UP) && $DATA->isPressingUp) $DATA->isPressingUp = FALSE;
 

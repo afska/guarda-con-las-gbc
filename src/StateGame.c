@@ -42,7 +42,7 @@ void Start_STATE_GAME() {
 
 	INIT_CONSOLE(font, 3, 2);
 
-	SpriteManagerAdd(SPRITE_HALU, 10, 100);
+	SpriteManagerAdd(SPRITE_WORLD, 0, 0);
 	InitScrollTiles(0, 4, tiles, 3);
 	InitScroll(mapWidth, mapHeight, map, NULL, 0, 3);
 	SHOW_BKG;

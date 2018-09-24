@@ -28,6 +28,9 @@
     <ClCompile Include="src\SpriteWorld.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SpriteStars.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Makefile" />
