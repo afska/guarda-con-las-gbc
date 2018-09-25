@@ -9,12 +9,12 @@
   Format               : Gameboy 4 color.
   Compression          : None.
   Counter              : None.
-  Tile size            : 32 x 32
-  Tiles                : 0 to 2
+  Tile size            : 8 x 8
+  Tiles                : 0 to 1
 
-  Palette colors       : Included.
+  Palette colors       : None.
   SGB Palette          : None.
-  CGB Palette          : 1 Byte per entry.
+  CGB Palette          : None.
 
   Convert to metatiles : No.
 
@@ -25,80 +25,6 @@
 
 /* Bank of tiles. */
 #define worldBank 0
-
-/* Super Gameboy palette 0 */
-#define worldSGBPal0c0 6076
-#define worldSGBPal0c1 8935
-#define worldSGBPal0c2 6596
-#define worldSGBPal0c3 5344
-
-/* Super Gameboy palette 1 */
-#define worldSGBPal1c0 6076
-#define worldSGBPal1c1 8935
-#define worldSGBPal1c2 6596
-#define worldSGBPal1c3 5344
-
-/* Super Gameboy palette 2 */
-#define worldSGBPal2c0 6076
-#define worldSGBPal2c1 8935
-#define worldSGBPal2c2 6596
-#define worldSGBPal2c3 5344
-
-/* Super Gameboy palette 3 */
-#define worldSGBPal3c0 6076
-#define worldSGBPal3c1 8935
-#define worldSGBPal3c2 6596
-#define worldSGBPal3c3 5344
-
-/* Gameboy Color palette 0 */
-#define worldCGBPal0c0 0
-#define worldCGBPal0c1 32767
-#define worldCGBPal0c2 20009
-#define worldCGBPal0c3 24239
-
-/* Gameboy Color palette 1 */
-#define worldCGBPal1c0 0
-#define worldCGBPal1c1 32767
-#define worldCGBPal1c2 28361
-#define worldCGBPal1c3 32557
-
-/* Gameboy Color palette 2 */
-#define worldCGBPal2c0 6076
-#define worldCGBPal2c1 8935
-#define worldCGBPal2c2 6596
-#define worldCGBPal2c3 5344
-
-/* Gameboy Color palette 3 */
-#define worldCGBPal3c0 6076
-#define worldCGBPal3c1 8935
-#define worldCGBPal3c2 6596
-#define worldCGBPal3c3 5344
-
-/* Gameboy Color palette 4 */
-#define worldCGBPal4c0 6076
-#define worldCGBPal4c1 8935
-#define worldCGBPal4c2 6596
-#define worldCGBPal4c3 5344
-
-/* Gameboy Color palette 5 */
-#define worldCGBPal5c0 6076
-#define worldCGBPal5c1 8935
-#define worldCGBPal5c2 6596
-#define worldCGBPal5c3 5344
-
-/* Gameboy Color palette 6 */
-#define worldCGBPal6c0 6076
-#define worldCGBPal6c1 8935
-#define worldCGBPal6c2 6596
-#define worldCGBPal6c3 5344
-
-/* Gameboy Color palette 7 */
-#define worldCGBPal7c0 6076
-#define worldCGBPal7c1 8935
-#define worldCGBPal7c2 6596
-#define worldCGBPal7c3 5344
-/* CGBpalette entries. */
-extern unsigned char worldCGB[];
 /* Start of tile array. */
 extern unsigned char world[];
 

@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SpriteStars.c" />
     <ClCompile Include="src\SpriteHalu.c" />
+    <ClCompile Include="src\SpriteStars.c" />
     <ClCompile Include="src\SpriteWorld.c" />
     <ClCompile Include="src\StateGame.c" />
     <ClCompile Include="src\ZGBMain.c" />

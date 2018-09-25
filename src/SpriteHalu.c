@@ -22,7 +22,10 @@ static struct Data {
 	UINT8 blinkCounter;
 };
 
-// TODO: Add declarations here
+static void blinkIfNeeded();
+static void handleInput();
+static void updateGravity();
+static void checkCollisions();
 
 void Start_SPRITE_HALU() {
 	THIS->coll_x = 2;

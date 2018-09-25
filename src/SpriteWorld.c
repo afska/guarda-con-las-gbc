@@ -13,8 +13,6 @@ static struct Data {
 	struct Sprite* stars[2];
 };
 
-// TODO: Figure out a way to add stars object (or simply instantiate "world" objects)
-
 void Start_SPRITE_WORLD() {
 	$DATA->halu = SpriteManagerAdd(SPRITE_HALU, 10, 100);
 

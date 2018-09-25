@@ -28,7 +28,7 @@
     <ClCompile Include="src\SpriteWorld.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SpriteStars.c">
+    <ClCompile Include="src\SpriteStars.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
