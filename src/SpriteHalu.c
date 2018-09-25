@@ -61,8 +61,8 @@ static void blinkIfNeeded() {
 }
 
 static void handleInput() {
-	if (KEY_PRESSED(J_UP) && !$DATA->isPressingUp) $DATA->isPressingUp = TRUE;
-	if (!KEY_PRESSED(J_UP) && $DATA->isPressingUp) $DATA->isPressingUp = FALSE;
+	if (KEY_PRESSED(J_A) && !$DATA->isPressingUp) $DATA->isPressingUp = TRUE;
+	if (!KEY_PRESSED(J_A) && $DATA->isPressingUp) $DATA->isPressingUp = FALSE;
 
 	if ($DATA->isPressingUp && !$DATA->isJumping) {
 		$DATA->isJumping = TRUE;
