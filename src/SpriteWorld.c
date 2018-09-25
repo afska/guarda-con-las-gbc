@@ -13,15 +13,21 @@ static UINT8 STAR1_X = 30;
 static UINT8 STAR2_X = 100;
 static UINT8 STARS_RESPAWN_MARGIN = 10;
 static UINT8 WIDTH = 160;
+static UINT8 ENEMY_WAIT = 60;
+static UINT8 INCREASE_SPEED_WAIT = 255;
 
 static struct Data {
 	struct Sprite* halu;
 	struct Sprite* stars[2];
 
 	UINT8 walkSpeed;
+	UINT8 enemyTimer;
+	UINT8 speedTimer;
 };
 
 static void scrollBy(INT8 x);
+static void addEnemyIfNeeded();
+static void increaseSpeedIfNeeded();
 
 void Start_SPRITE_WORLD() {
 	$DATA->halu = SpriteManagerAdd(SPRITE_HALU, PLAYER_X, PLAYER_Y);
@@ -32,10 +38,14 @@ void Start_SPRITE_WORLD() {
 	$DATA->stars[1]->current_frame = 1;
 
 	$DATA->walkSpeed = INITIAL_WALK_SPEED;
+	$DATA->enemyTimer = 0;
+	$DATA->speedTimer = 0;
 }
 
 void Update_SPRITE_WORLD() {
 	scrollBy($DATA->walkSpeed);
+	addEnemyIfNeeded();
+	increaseSpeedIfNeeded();
 }
 
 void Destroy_SPRITE_WORLD() {
@@ -47,4 +57,23 @@ static void scrollBy(INT8 x) {
 
 	if ($DATA->stars[0]->x <= 1) $DATA->stars[0]->x = WIDTH - STARS_RESPAWN_MARGIN;
 	if ($DATA->stars[1]->x <= 1) $DATA->stars[1]->x = WIDTH - STARS_RESPAWN_MARGIN;
+}
+
+static void addEnemyIfNeeded() {
+	$DATA->enemyTimer++;
+
+	if ($DATA->enemyTimer >= ENEMY_WAIT) {
+		struct Sprite* enemy = SpriteManagerAdd(SPRITE_GBC, WIDTH, 108);
+		((struct GbcSpeed*) enemy->custom_data)->speed = $DATA->walkSpeed;
+		$DATA->enemyTimer = 0;
+	}
+}
+
+static void increaseSpeedIfNeeded() {
+	$DATA->speedTimer++;
+
+	if ($DATA->speedTimer >= INCREASE_SPEED_WAIT) {
+		$DATA->walkSpeed++;
+		$DATA->enemyTimer = 0;
+	}
 }

@@ -7,6 +7,7 @@ UINT8 bank_STATE_GAME = 2;
 #include "..\res\src\stars.h"
 #include "..\res\src\world.h"
 #include "..\res\src\halu.h"
+#include "..\res\src\gbc.h"
 
 #include "ZGBMain.h"
 #include "Scroll.h"
@@ -21,7 +22,7 @@ static UINT16 PALETTE_TILES[] = {PALETTE_FROM_HEADER(tiles)};
 static UINT16 PALETTE_SPRITES[] = { 
 	PALETTE_INDEX(halu, 0),
 	PALETTE_INDEX(stars, 1),
-	PALETTE_INDEX(halu, 2),
+	PALETTE_INDEX(gbc, 2),
 	PALETTE_INDEX(halu, 3),
 	PALETTE_INDEX(halu, 4),
 	PALETTE_INDEX(halu, 5),
