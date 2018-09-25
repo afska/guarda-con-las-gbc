@@ -16,9 +16,10 @@ static struct Data {
 void Start_SPRITE_WORLD() {
 	$DATA->halu = SpriteManagerAdd(SPRITE_HALU, 10, 100);
 
-	$DATA->stars[0] = SpriteManagerAdd(SPRITE_STARS, 90, 10);
+	$DATA->stars[0] = SpriteManagerAdd(SPRITE_STARS, 30, 10);
+	$DATA->stars[0]->current_frame = 0;
 	$DATA->stars[1] = SpriteManagerAdd(SPRITE_STARS, 100, 20);
-	$DATA->stars[1]->current_frame = 2;
+	$DATA->stars[1]->current_frame = 1;
 }
 
 void Update_SPRITE_WORLD() {
