@@ -5,6 +5,7 @@ UINT8 bank_SPRITE_WORLD = 2;
 #include "SpriteManager.h"
 #include "ZGBMain.h"
 #include "Keys.h"
+#include "Print.h"
 
 static UINT8 INITIAL_WALK_SPEED = 3;
 static UINT8 PLAYER_X = 10;
@@ -23,13 +24,17 @@ static struct Data {
 	UINT8 walkSpeed;
 	UINT8 enemyTimer;
 	UINT8 speedTimer;
+	UINT8 score;
 };
 
 static void scrollBy(INT8 x);
 static void addEnemyIfNeeded();
 static void increaseSpeedIfNeeded();
+static void printScore();
 
 void Start_SPRITE_WORLD() {
+	Printf(" Guarda con las GBC");
+
 	$DATA->halu = SpriteManagerAdd(SPRITE_HALU, PLAYER_X, PLAYER_Y);
 
 	$DATA->stars[0] = SpriteManagerAdd(SPRITE_STARS, STAR1_X, 10);
@@ -40,6 +45,7 @@ void Start_SPRITE_WORLD() {
 	$DATA->walkSpeed = INITIAL_WALK_SPEED;
 	$DATA->enemyTimer = 0;
 	$DATA->speedTimer = 0;
+	$DATA->score = 0;
 }
 
 void Update_SPRITE_WORLD() {
@@ -66,6 +72,8 @@ static void addEnemyIfNeeded() {
 		struct Sprite* enemy = SpriteManagerAdd(SPRITE_GBC, WIDTH, 108);
 		((struct GbcSpeed*) enemy->custom_data)->speed = $DATA->walkSpeed;
 		$DATA->enemyTimer = 0;
+		$DATA->score++;
+		printScore();
 	}
 }
 
@@ -76,4 +84,9 @@ static void increaseSpeedIfNeeded() {
 		$DATA->walkSpeed++;
 		$DATA->enemyTimer = 0;
 	}
+}
+
+static void printScore() {
+	PRINT_POS(0, 0);
+	Printf("PUNTAJE: %d                    ", $DATA->score);
 }
